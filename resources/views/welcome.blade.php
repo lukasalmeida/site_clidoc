@@ -43,7 +43,7 @@
           class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
           data-path="features" href="#features">Features</a><a
           class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="roadmap" href="#roadmap">Roadmap</a></nav>
+          data-path="contribua" href="#contribua">Contribua</a></nav>
       <div class="flex items-center gap-space-md"><a
           class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-raised text-on-surface-variant hover:text-on-surface transition-colors"
           href="https://github.com/lukasalmeida/clidoc" rel="noopener noreferrer" target="_blank"><span
@@ -91,7 +91,7 @@
             <!-- Subtagline -->
             <p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mb-space-xl">
               Uma CLI em Go que lê anotações no seu código-fonte e gera especificações
-              <span class="text-text-primary font-medium">OpenAPI 3.0</span> automaticamente. A saída Markdown está no roadmap.
+              <span class="text-text-primary font-medium">OpenAPI 3.0</span> automaticamente.
             </p>
             <!-- Main CTAs -->
             <div
@@ -370,9 +370,9 @@
                   4</div>
                 <h4 class="font-headline-sm text-title-md text-text-primary mb-1">Generators</h4>
                 <p class="font-body-sm text-body-sm text-text-secondary">Compila a IR em especificações OpenAPI 3.0
-                  (JSON). O gerador Markdown está planejado para o roadmap.</p>
+                  (JSON).</p>
               </div>
-              <span class="mt-space-md font-code-sm text-code-sm text-text-muted">JSON hoje • Markdown no roadmap</span>
+              <span class="mt-space-md font-code-sm text-code-sm text-text-muted">OpenAPI 3.0 • JSON</span>
             </div>
             <!-- Step 5 -->
             <div
@@ -538,8 +538,8 @@
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span
-                    class="font-code-sm text-code-sm bg-accent-orange-bright/10 text-accent-orange-bright px-2 py-0.5 rounded border border-accent-orange-bright/20">Fase
-                    2 • Em Breve</span>
+                    class="font-code-sm text-code-sm bg-status-success/10 text-status-success px-2 py-0.5 rounded border border-status-success/20">Disponível
+                    nesta versão</span>
                   <span class="material-symbols-outlined text-text-muted">tune</span>
                 </div>
                 <code class="font-headline-sm text-headline-sm text-text-primary block mb-space-xs">clidoc init</code>
@@ -560,8 +560,8 @@
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span
-                    class="font-code-sm text-code-sm bg-accent-orange-bright/10 text-accent-orange-bright px-2 py-0.5 rounded border border-accent-orange-bright/20">Fase
-                    2 • Em Breve</span>
+                    class="font-code-sm text-code-sm bg-status-success/10 text-status-success px-2 py-0.5 rounded border border-status-success/20">Disponível
+                    nesta versão</span>
                   <span class="material-symbols-outlined text-text-muted">public</span>
                 </div>
                 <code class="font-headline-sm text-headline-sm text-text-primary block mb-space-xs">clidoc serve</code>
@@ -572,7 +572,7 @@
               </div>
               <div
                 class="mt-space-lg pt-space-md border-t border-border-subtle font-code-sm text-code-sm text-text-muted">
-                <span class="text-text-primary">Planejado para a Fase 2</span>
+                <span class="text-text-primary">Servidor local • Swagger UI • Hot Reload</span>
               </div>
             </div>
           </div>
@@ -594,10 +594,10 @@
             </div>
             <div class="bg-surface-deep p-space-md rounded-lg border border-border-subtle">
               <div class="text-accent-orange-bright font-headline-sm mb-1 flex items-center gap-1">
-                <span class="material-symbols-outlined text-[18px]">description</span> Saída Dupla
+                <span class="material-symbols-outlined text-[18px]">description</span> OpenAPI 3.0
               </div>
-              <p class="font-body-sm text-body-sm text-text-secondary">Gere OpenAPI 3.0 para ferramentas compatíveis.
-                Exportação Markdown está no roadmap.</p>
+              <p class="font-body-sm text-body-sm text-text-secondary">Gere especificações OpenAPI 3.0 em JSON para
+                ferramentas compatíveis.</p>
             </div>
             <div class="bg-surface-deep p-space-md rounded-lg border border-border-subtle">
               <div class="text-accent-orange-bright font-headline-sm mb-1 flex items-center gap-1">
@@ -609,115 +609,9 @@
           </div>
         </div>
       </section>
-      <!-- ROADMAP EVOLUTIVO (6 Fases) -->
-      <section class="w-full bg-surface-base py-space-3xl" id="roadmap">
-        <div class="max-w-[1240px] mx-auto px-margin">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-2xl gap-space-md">
-            <div>
-              <span
-                class="font-code-sm text-code-sm uppercase tracking-widest text-accent-orange-bright bg-surface-raised px-space-sm py-1 rounded">Visão
-                de Futuro</span>
-              <h2 class="font-headline-lg text-headline-lg text-text-primary mt-space-sm">Roadmap de Desenvolvimento
-              </h2>
-            </div>
-            <p class="font-body-md text-body-md text-text-secondary max-w-sm">
-              Acompanhe os próximos saltos de engenharia e participe ativamente da evolução da ferramenta.
-            </p>
-          </div>
-          <!-- Roadmap Timeline Container -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <!-- Fase 1: Concluída -->
-            <div
-              class="bg-surface-raised border border-status-success/30 rounded-xl p-space-lg relative overflow-hidden">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-status-success font-bold flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[16px]">check_circle</span> FASE 1
-                </span>
-                <span
-                  class="font-code-sm text-code-sm bg-status-success/20 text-status-success px-2 py-0.5 rounded">Concluído
-                  (MVP)</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Parser Go AST & OpenAPI</h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Parser sintático de código Go (.go), extração de anotações e geração do arquivo openapi.json compatível
-                com especificações OpenAPI 3.0.
-              </p>
-            </div>
-            <!-- Fase 2 -->
-            <div
-              class="bg-surface-raised border border-accent-orange-bright/40 rounded-xl p-space-lg relative overflow-hidden shadow-[0_0_15px_rgba(249,115,22,0.06)]">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-accent-orange-bright font-bold flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[16px]">pending</span> FASE 2
-                </span>
-                <span
-                  class="font-code-sm text-code-sm bg-accent-orange-bright/20 text-accent-orange-bright px-2 py-0.5 rounded">Planejado</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Comandos Init & Serve</h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Inicializador guiado com arquivo de configuração clidoc.yaml e servidor local embutido com Swagger UI
-                integrado e live hot reload.
-              </p>
-            </div>
-            <!-- Fase 3 -->
-            <div class="bg-surface-raised border border-border-subtle rounded-xl p-space-lg">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-text-muted font-bold">FASE 3</span>
-                <span
-                  class="font-code-sm text-code-sm bg-surface-overlay text-text-secondary px-2 py-0.5 rounded">Planejado</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Python & Node.js</h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Implementação da interface Parser universal para extrair docstrings em Python (FastAPI/Flask) e JSDoc em
-                ecossistemas Node.js/TypeScript.
-              </p>
-            </div>
-            <!-- Fase 4 -->
-            <div class="bg-surface-raised border border-border-subtle rounded-xl p-space-lg">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-text-muted font-bold">FASE 4</span>
-                <span
-                  class="font-code-sm text-code-sm bg-surface-overlay text-text-secondary px-2 py-0.5 rounded">Planejado</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Auto-Leitura de Structs/DTOs
-              </h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Inspeção automática de campos e tags `json:""` de structs para preenchimento de schemas e payloads de
-                requisição sem digitação manual.
-              </p>
-            </div>
-            <!-- Fase 5 -->
-            <div class="bg-surface-raised border border-border-subtle rounded-xl p-space-lg">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-text-muted font-bold">FASE 5</span>
-                <span
-                  class="font-code-sm text-code-sm bg-surface-overlay text-text-secondary px-2 py-0.5 rounded">Planejado</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Validação de Rotas & Markdown
-              </h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Linter embutido para alertar sobre parâmetros de URL divergentes e exportador completo de tabelas e
-                endpoints em Markdown nativo.
-              </p>
-            </div>
-            <!-- Fase 6 -->
-            <div class="bg-surface-raised border border-border-subtle rounded-xl p-space-lg">
-              <div class="flex items-center justify-between mb-space-sm">
-                <span class="font-code-sm text-code-sm text-text-muted font-bold">FASE 6</span>
-                <span
-                  class="font-code-sm text-code-sm bg-surface-overlay text-text-secondary px-2 py-0.5 rounded">Comunidade</span>
-              </div>
-              <h4 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Ecossistema & Plugins</h4>
-              <p class="font-body-sm text-body-sm text-text-secondary">
-                Templates personalizados de UI, GitHub Actions oficiais prontas para deploy, e hub de parsers
-                construídos pela comunidade open source.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- CTA DE CONTRIBUIÇÃO (Open Source) -->
-      <section class="w-full bg-surface-raised border-t border-border-subtle py-space-3xl relative overflow-hidden">
+      <section class="w-full bg-surface-raised border-t border-border-subtle py-space-3xl relative overflow-hidden"
+        id="contribua">
         <!-- Subtle amber glow -->
         <div
           class="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-primary-container/10 blur-[100px] rounded-full pointer-events-none">
@@ -796,8 +690,6 @@
           <ul class="space-y-space-sm font-body-sm text-body-sm">
             <li><a class="text-on-surface-variant hover:text-on-surface transition-colors"
                 href="https://github.com/lukasalmeida/clidoc">Repositório GitHub</a></li>
-            <li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="roadmap"
-                href="#roadmap">Roadmap Público</a></li>
             <li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="https://substack.com"
                 rel="noopener noreferrer" target="_blank">Substack Técnico</a></li>
             <li><a class="text-on-surface-variant hover:text-on-surface transition-colors"

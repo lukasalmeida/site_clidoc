@@ -7,7 +7,7 @@
 
 ## 1. O que é o CliDoc
 
-**CliDoc** é um utilitário de linha de comando (CLI), escrito em **Go**, que analisa o código-fonte de um projeto (Go hoje; Python e Node.js no roadmap) e gera documentação de API **OpenAPI 3.0 (Swagger)** ou **Markdown** de forma automática.
+**CliDoc** é um utilitário de linha de comando (CLI), escrito em **Go**, que analisa o código-fonte de projetos Go e gera documentação de API **OpenAPI 3.0 (Swagger)** de forma automática. Suporte a outras linguagens, como Python e Node.js, pode ser desenvolvido futuramente.
 
 **Tagline sugerida:** *"Documentação de API sem escrever documentação."*
 
@@ -48,9 +48,9 @@ Estas são as features que o site DEVE comunicar:
 
 | Comando | Descrição | Status |
 | --- | --- | --- |
-| `clidoc init` | Inicializa a configuração (`clidoc.yaml`) no projeto | Roadmap (Fase 2) |
-| `clidoc generate` | Analisa o código e gera `openapi.json` / Markdown | MVP disponível |
-| `clidoc serve` | Sobe servidor local com Swagger UI/Redoc e hot reload | Roadmap (Fase 2) |
+| `clidoc init` | Inicializa a configuração (`clidoc.yaml`) no projeto | Disponível |
+| `clidoc generate` | Analisa o código e gera `openapi.json` | Disponível |
+| `clidoc serve` | Sobe servidor local com Swagger UI/Redoc e hot reload | Disponível |
 
 ### 3.2 Pipeline linear (mostrar como diagrama)
 
@@ -60,10 +60,10 @@ Estas são as features que o site DEVE comunicar:
 
 Cinco componentes:
 
-1. **CLI Core** — processa argumentos e carrega `clidoc.yaml`.
+1. **CLI Core** — oferece os comandos `init`, `generate` e `serve`, processa argumentos e carrega `clidoc.yaml`.
 2. **Parsers** — leem o código via AST ou comentários e produzem estrutura neutra.
 3. **IR (Intermediate Representation)** — rotas, métodos, parâmetros e respostas, independente da linguagem de origem. É o coração da arquitetura: adicionar Python/Node.js = escrever um parser novo, sem tocar nos generators.
-4. **Generators** — convertem a IR em OpenAPI 3.0 (JSON/YAML) ou Markdown.
+4. **Generators** — convertem a IR em OpenAPI 3.0 (JSON).
 5. **Server/UI** — servidor local com Swagger UI ou Redoc e hot reload.
 
 ### 3.3 Padrão de anotações (destaque principal do site)
@@ -105,16 +105,7 @@ clidoc serve
 - **Zero reflection / zero execução do código alvo** — só AST e comentários.
 - **IR neutra entre linguagens** — arquitetura plugável de parsers.
 - **Open source com boa DX** — portas de entrada claras para contribuidores.
-- **Saída dupla** — OpenAPI para Swagger UI ou Markdown para docs no repositório.
-
-### 3.6 Roadmap (mostrar como timeline/seção "Em breve")
-
-- **Fase 1 — MVP:** parser AST de `.go` + geração de `openapi.json` ✅ (esboço pronto)
-- **Fase 2:** comandos `init` e `serve` (Swagger UI local com hot reload)
-- **Fase 3:** interface `Parser` universal e suporte a Python/Node.js
-- **Fase 4:** leitura de DTOs/structs para auto-preencher `@Param`
-- **Fase 5:** suporte a YAML e Markdown; validação de rotas/parâmetros inconsistentes
-- **Fase 6:** comunidade — CONTRIBUTING.md, templates de issue, CI, releases
+- **OpenAPI 3.0** — especificações JSON para ferramentas compatíveis, incluindo Swagger UI.
 
 ### 3.7 Chamadas para contribuição (CTA)
 
@@ -131,9 +122,8 @@ clidoc serve
 4. **Como funciona** — diagrama do pipeline linear + os 5 componentes.
 5. **Sintaxe de anotações** — bloco de código com destaque de sintaxe + "antes/depois" (código → `openapi.json`).
 6. **Funcionalidades** — grade de cards (comandos, saída OpenAPI/Markdown, serve/hot reload, IR plugável).
-7. **Roadmap** — timeline horizontal com as 6 fases.
-8. **Contribua** — CTA open source (GitHub, good first issue).
-9. **Footer** — links (Releases/Downloads, GitHub, Substack, licença MIT), crédito do autor.
+7. **Contribua** — CTA open source (GitHub, good first issue).
+8. **Footer** — links (Releases/Downloads, GitHub, Substack, licença MIT), crédito do autor.
 
 ### Conteúdo secundário (opcional, páginas internas)
 
@@ -173,7 +163,7 @@ clidoc serve
 ```
 clidoc-site/
 ├── app/Http/Controllers/     # HomeController (opcional, se houver lógica)
-├── resources/views/          # Blade: layout, hero, problema, pipeline, syntax, features, roadmap, contribute
+├── resources/views/          # Blade: layout, hero, problema, pipeline, syntax, features, contribute
 ├── routes/web.php            # Rotas: "/", "/docs", "/changelog" (futuro)
 ├── public/                   # index.php, assets buildados, favicon
 ├── vite.config.js            # Build de CSS/JS (Tailwind)
@@ -270,4 +260,4 @@ services:
 
 ## Resumo em uma frase
 
-> Site em **PHP com Laravel** (Blade + Vite + Tailwind) em português, landing page única que apresenta o CliDoc — CLI em Go que gera OpenAPI a partir de comentários no código — com seções de problema, pipeline, sintaxe, features, roadmap e CTA de contribuição, hospedado no Render como Web Service PHP com deploy automático via CI/CD a cada push no GitHub.
+> Site em **PHP com Laravel** (Blade + Vite + Tailwind) em português, landing page única que apresenta o CliDoc — CLI em Go que gera OpenAPI a partir de comentários no código — com seções de problema, pipeline, sintaxe, features e CTA de contribuição, hospedado no Render como Web Service PHP com deploy automático via CI/CD a cada push no GitHub.

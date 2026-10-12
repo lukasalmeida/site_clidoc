@@ -25,7 +25,13 @@ class ExampleTest extends TestCase
             ->assertSee('https://github.com/lukasalmeida/clidoc/releases')
             ->assertSee('clidoc generate ./meu-projeto')
             ->assertSee('"@context":"https://schema.org"', false)
-            ->assertSee('A saída Markdown está no roadmap.');
+            ->assertSee('clidoc init')
+            ->assertSee('clidoc serve')
+            ->assertSee('Disponível')
+            ->assertDontSee('Roadmap de Desenvolvimento')
+            ->assertDontSee('Fase 2 • Em Breve');
+
+        $this->assertSame(3, substr_count($response->getContent(), 'Disponível'));
     }
 
     public function test_sitemap_lists_the_home_page(): void
