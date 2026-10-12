@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://clidoc.onrender.com/sitemap.xml
