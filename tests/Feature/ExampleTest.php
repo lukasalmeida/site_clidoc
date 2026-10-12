@@ -43,4 +43,9 @@ class ExampleTest extends TestCase
             ->assertHeader('content-type', 'application/xml; charset=UTF-8')
             ->assertSee('<loc>http://localhost:8000</loc>', false);
     }
+
+    public function test_health_check_endpoint_returns_ok(): void
+    {
+        $this->get('/up')->assertOk();
+    }
 }
