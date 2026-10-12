@@ -19,7 +19,7 @@ services:
       - key: APP_KEY
         sync: false
       - key: APP_URL
-        value: https://clidoc.onrender.com
+        value: https://clidoc-site.onrender.com
       - key: CACHE_STORE
         value: file
       - key: QUEUE_CONNECTION

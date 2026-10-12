@@ -48,4 +48,18 @@ class ExampleTest extends TestCase
     {
         $this->get('/up')->assertOk();
     }
+
+    public function test_asset_urls_use_https_when_request_is_forwarded_by_render(): void
+    {
+        $response = $this
+            ->withServerVariables([
+                'HTTP_X_FORWARDED_PROTO' => 'https',
+            ])
+            ->get('/');
+
+        $response
+            ->assertOk()
+            ->assertSee('https://localhost:8000/build/assets/', false)
+            ->assertDontSee('http://localhost:8000/build/assets/', false);
+    }
 }
