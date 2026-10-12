@@ -628,7 +628,7 @@
                 Contribua com o futuro da CLI.
               </h2>
               <p class="font-body-lg text-body-lg text-text-secondary mb-space-md leading-relaxed">
-                O CliDoc é 100% gratuito e open source sob licença MIT. Quer implementar parsers para novas linguagens,
+                O CliDoc é 100% gratuito e open source sob licença Apache 2.0. Quer implementar parsers para novas linguagens,
                 adicionar validação de rotas ou otimizar nossa AST? O repositório está aberto para PRs.
               </p>
               <div class="flex flex-wrap items-center gap-2 font-code-sm text-code-sm text-text-muted">
@@ -682,7 +682,7 @@
             <li><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pipeline"
                 href="#pipeline">Pipeline de Geração</a></li>
             <li><a class="text-on-surface-variant hover:text-on-surface transition-colors"
-                href="https://github.com/lukasalmeida/clidoc/blob/main/LICENSE">Licença MIT</a></li>
+                href="https://github.com/lukasalmeida/clidoc/blob/main/LICENSE">Licença Apache 2.0</a></li>
           </ul>
         </div>
         <div>
@@ -707,7 +707,7 @@
       </div>
       <div
         class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-text-muted">
-        <p>© {{ date('Y') }} CliDoc CLI. Open source sob licença MIT. Criado por <a
+        <p>© {{ date('Y') }} CliDoc CLI. Open source sob licença Apache 2.0. Criado por <a
             class="text-primary hover:text-accent-orange-bright transition-colors"
             href="https://github.com/lukasalmeida">Lukas Almeida</a>.</p>
         <div class="flex items-center gap-space-lg font-code-sm text-code-sm"><span>Go Toolchain</span><span>OpenAPI
