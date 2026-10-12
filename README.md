@@ -43,7 +43,7 @@ npm run build
 
 ## Deploy no Render
 
-O `render.yaml` configura um Web Service usando o Dockerfile da raiz e ativa deploy automático. Conecte o repositório ao Render; o Blueprint gera `APP_KEY` para produção. A URL `https://clidoc.onrender.com` é um placeholder e deve ser ajustada caso o serviço ou domínio tenha outro endereço.
+O `render.yaml` configura um Web Service usando o Dockerfile da raiz e ativa deploy automático. Gere uma chave compatível com o Laravel usando `php artisan key:generate --show` e configure o resultado como `APP_KEY` no ambiente do serviço Render. O Blueprint não sincroniza esse segredo. Não publique nem compartilhe a chave; depois de configurada, evite trocá-la para não invalidar dados criptografados. A URL `https://clidoc.onrender.com` é um placeholder e deve ser ajustada caso o serviço ou domínio tenha outro endereço.
 
 ## Estrutura
 
